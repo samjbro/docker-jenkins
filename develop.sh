@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set environment variables for dev or CI
-if [! -z "$BUILD_NUMBER" ]; then
+if [ ! -z "$BUILD_NUMBER" ]; then
     # We need the full path here because /sbin is not in user Jenkin's $PATH
     export XDEBUG_HOST=$(/sbin/ifconfig docker0 | grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1)
 else
