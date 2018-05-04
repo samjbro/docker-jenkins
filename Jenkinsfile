@@ -2,7 +2,7 @@
 
 node('master') {
     stage('build') {
-        git url: 'git@github.com:samjbro/docker-jenkins.com.git'
+        git url: 'git@github.com:samjbro/docker-jenkins.git'
 
         // Start services (Let docker-compose build containers for testing)
         sh "./develop.sh up -d"
